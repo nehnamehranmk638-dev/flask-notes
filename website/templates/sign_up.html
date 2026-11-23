@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<div class="row justify-content-center py-4">
+  <div class="col-md-6 col-lg-5">
+    <form method="POST" class="border p-4 shadow-sm rounded bg-light">
+      <h3 class="text-center mb-4">Create Account</h3>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter email address"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          name="firstName"
+          placeholder="Enter first name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password1"
+          name="password1"
+          placeholder="Enter password (min 7 chars)"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password2">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password2"
+          name="password2"
+          placeholder="Confirm password"
+          required
+        />
+      </div>
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+      </div>
+      <p class="text-center mt-3 text-muted">
+        Already have an account? <a href="/login">Login</a>
+      </p>
+    </form>
+  </div>
+</div>
+{% endblock %}
